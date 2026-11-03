@@ -1,0 +1,51 @@
+{
+  "initial": {
+    "root": 8,
+    "nodes": [
+      {
+        "key": 8,
+        "left": 4,
+        "right": 10,
+        "color": "black"
+      },
+      {
+        "key": 4,
+        "left": 2,
+        "right": 6,
+        "color": "red"
+      },
+      {
+        "key": 2,
+        "left": 1,
+        "right": null,
+        "color": "black"
+      },
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "color": "red"
+      },
+      {
+        "key": 6,
+        "left": 5,
+        "right": null,
+        "color": "black"
+      },
+      {
+        "key": 5,
+        "left": null,
+        "right": null,
+        "color": "red"
+      },
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": "black"
+      }
+    ]
+  },
+  "operations": [],
+  "tree_type": "red_black"
+}

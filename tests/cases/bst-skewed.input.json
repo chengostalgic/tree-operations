@@ -1,0 +1,22 @@
+{
+  "initial": null,
+  "operations": [
+    {
+      "kind": "insert",
+      "key": 30
+    },
+    {
+      "kind": "insert",
+      "key": 20
+    },
+    {
+      "kind": "insert",
+      "key": 10
+    },
+    {
+      "kind": "delete",
+      "key": 20
+    }
+  ],
+  "tree_type": "bst"
+}

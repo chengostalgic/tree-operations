@@ -1,0 +1,23 @@
+{
+  "request": {
+    "initial": null,
+    "operations": [],
+    "tree_type": "avl"
+  },
+  "initial": {
+    "root": null,
+    "nodes": [],
+    "inorder": [],
+    "height": 0,
+    "size": 0
+  },
+  "steps": [],
+  "final": {
+    "root": null,
+    "nodes": [],
+    "inorder": [],
+    "height": 0,
+    "size": 0
+  },
+  "total_rotations": 0
+}

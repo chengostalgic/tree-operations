@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "root": 4,
+    "nodes": [
+      {
+        "key": 5,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 3,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 2,
+        "left": 1,
+        "right": 3,
+        "color": null
+      },
+      {
+        "key": 4,
+        "left": 2,
+        "right": 5,
+        "color": null
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "delete",
+      "key": 5
+    }
+  ],
+  "tree_type": "avl"
+}

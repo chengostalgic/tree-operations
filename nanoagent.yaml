@@ -1,0 +1,79 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: avl-tree-operations
+name: Tree Operations
+version: 0.2.0
+status: ready
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  apply_operations:
+    description: Perform ordered insert/delete operations on a chosen integer-key BST, AVL, or left-leaning red-black tree. Return each tree, exact rotations, color changes, heights, and statuses. BST deliberately does not balance; AVL and red-black follow distinct explicit policies.
+
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  tree-operations:
+    description: >-
+      Perform tree insertions and deletions using the selected balancing policy.
+      The user may speak ordinary language; construct the typed arguments yourself,
+      never ask for JSON. Always set tree_type: bst for an ordinary unbalanced
+      binary search tree, avl for AVL, or red_black for a LEFT-LEANING 2-3 red-black
+      tree (LLRB). If unspecified for a new tree, choose avl and say so. Map
+      "red-black" or "red black" to red_black and state the LLRB variant; this is
+      not CLRS-style conventional red-black balancing. All types have unique
+      signed 32-bit integer keys. Set initial: null to start empty. Expand
+      "insert 30, 20, 10 then delete 20" into operations in that EXACT sequence.
+      Do not sort or deduplicate operations: insertion order affects tree shape.
+      A duplicate insertion is an already_present no-op; deleting an absent key is
+      a not_found no-op. Do not invent an error or omit such operations from the trace.
+      If the user supplies an existing tree, set initial.root and initial.nodes
+      with each node's key, left child's key or null, right child's key or null,
+      and color. Each node's color must be null for bst/avl and explicitly red
+      or black for red_black. Do not invent missing colors on an existing
+      red-black tree; ask or build from a stated insertion sequence instead.
+      Preserve that shape; node table row order does not matter. A set of starting
+      keys alone does not identify an existing shape. If an insertion sequence is
+      stated, build it using initial null and leading insert operations; otherwise
+      clarify only if the intended initial shape/order is genuinely ambiguous.
+      For follow-up operations, preserve tree_type and copy the previous final
+      root and each node's key/left/right/color into initial; cached heights and
+      balances are not inputs. Never switch types silently. A supplied initial
+      tree must already satisfy its selected type's invariants; the tool
+      rejects cycles, shared children, disconnected nodes, invalid BST order, and
+      invalid AVL/LLRB starts instead of silently rebuilding a different tree.
+      BST starts may be arbitrarily skewed. AVL balancing uses left height minus
+      right height. LLRB uses rotations and color flips, keeps its root black,
+      has no red right links or consecutive red links, and equal black heights.
+      Its deletion moves red links toward the deletion path before descending,
+      then restores left-leaning form on ascent. A two-child deletion
+      replaces the key with its in-order successor, the smallest key in the right
+      subtree. For AVL a heavy child of balance zero uses a single rotation.
+      Deletions may rebalance at multiple ancestors. Show the returned diagrams,
+      rotations, and color changes; use this task instead of mentally guessing a
+      tree. For a comparison, call once per type with the SAME ordered operations
+      and an empty start. Do not feed one type's final shape into another type.
+      For B-tree, splay, heap, arbitrary-key, or delayed bulk balancing requests,
+      explain the supported BST/AVL/LLRB scope.
+    runner: tool
+    tools: [apply_operations]
+    reference: null
+    instructions: >-
+      Apply every operation using the declared tree_type and successor convention.
+      Return each intermediate tree, no-op status, primitive rotations and actual
+      recolors, with each trace independently in execution order. New red-node
+      creation is not a recolor; root recolors are included. Duplicate insertions
+      and absent deletions have empty traces. Heights use empty 0 and leaf 1.
+      Only AVL requires absolute balance <= 1; BST has no balance constraint and
+      LLRB uses its color/black-height constraints instead. Input/output
+      verification independently replays the sequence without importing the runtime.
+      Bounds are 256 live nodes, 128 operations, and 8192 total node entries across
+      initial and per-operation snapshots. An exceeded bound is an explicit input
+      error, never a partial result silently presented as the full sequence.

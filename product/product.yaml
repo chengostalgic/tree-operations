@@ -1,0 +1,15 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Explore BST, AVL, and red-black tree operations."
+summary: >-
+  Choose a plain BST, AVL, or left-leaning red-black tree in ordinary language.
+  See every insertion and deletion, balancing rotation, and color change, with
+  independently verified tree structure and type-specific invariants.
+highlights:
+  - "Insert and delete integer keys in your stated order."
+  - "Choose unbalanced BST, height-balanced AVL, or left-leaning red-black."
+  - "Expand a diagram of every intermediate tree."
+  - "Verify rotations, red-black recolors, and every intermediate tree."
+steps:
+  - "Choose BST, AVL, or red-black; start empty or describe a valid existing tree."
+  - "List the insertions and deletions you want to perform."
+  - "Explore resulting trees, statuses, rotations, and red-black color changes."

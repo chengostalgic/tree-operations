@@ -1,0 +1,103 @@
+{
+  "request": {
+    "initial": {
+      "root": 0,
+      "nodes": [
+        {
+          "key": 1,
+          "left": null,
+          "right": null,
+          "color": null
+        },
+        {
+          "key": -1,
+          "left": null,
+          "right": null,
+          "color": null
+        },
+        {
+          "key": 0,
+          "left": -1,
+          "right": 1,
+          "color": null
+        }
+      ]
+    },
+    "operations": [],
+    "tree_type": "avl"
+  },
+  "initial": {
+    "root": 0,
+    "nodes": [
+      {
+        "key": -1,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 0,
+        "left": -1,
+        "right": 1,
+        "height": 2,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      }
+    ],
+    "inorder": [
+      -1,
+      0,
+      1
+    ],
+    "height": 2,
+    "size": 3
+  },
+  "steps": [],
+  "final": {
+    "root": 0,
+    "nodes": [
+      {
+        "key": -1,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 0,
+        "left": -1,
+        "right": 1,
+        "height": 2,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      }
+    ],
+    "inorder": [
+      -1,
+      0,
+      1
+    ],
+    "height": 2,
+    "size": 3
+  },
+  "total_rotations": 0
+}

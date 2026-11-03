@@ -1,0 +1,103 @@
+{
+  "request": {
+    "initial": {
+      "root": 20,
+      "nodes": [
+        {
+          "key": 20,
+          "left": 10,
+          "right": null,
+          "color": "black"
+        },
+        {
+          "key": 10,
+          "left": null,
+          "right": null,
+          "color": "red"
+        }
+      ]
+    },
+    "operations": [
+      {
+        "kind": "delete",
+        "key": 10
+      }
+    ],
+    "tree_type": "red_black"
+  },
+  "initial": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": "red",
+        "height": 1,
+        "balance": 0
+      },
+      {
+        "key": 20,
+        "left": 10,
+        "right": null,
+        "color": "black",
+        "height": 2,
+        "balance": 1
+      }
+    ],
+    "inorder": [
+      10,
+      20
+    ],
+    "height": 2,
+    "size": 2
+  },
+  "steps": [
+    {
+      "operation": {
+        "kind": "delete",
+        "key": 10
+      },
+      "status": "deleted",
+      "rotations": [],
+      "tree": {
+        "root": 20,
+        "nodes": [
+          {
+            "key": 20,
+            "left": null,
+            "right": null,
+            "color": "black",
+            "height": 1,
+            "balance": 0
+          }
+        ],
+        "inorder": [
+          20
+        ],
+        "height": 1,
+        "size": 1
+      },
+      "recolors": []
+    }
+  ],
+  "final": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 20,
+        "left": null,
+        "right": null,
+        "color": "black",
+        "height": 1,
+        "balance": 0
+      }
+    ],
+    "inorder": [
+      20
+    ],
+    "height": 1,
+    "size": 1
+  },
+  "total_rotations": 0
+}

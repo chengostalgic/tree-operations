@@ -1,0 +1,173 @@
+{
+  "request": {
+    "initial": {
+      "root": 20,
+      "nodes": [
+        {
+          "key": 20,
+          "left": 10,
+          "right": 30,
+          "color": "black"
+        },
+        {
+          "key": 10,
+          "left": null,
+          "right": null,
+          "color": "black"
+        },
+        {
+          "key": 30,
+          "left": null,
+          "right": null,
+          "color": "black"
+        }
+      ]
+    },
+    "operations": [
+      {
+        "kind": "delete",
+        "key": 10
+      }
+    ],
+    "tree_type": "red_black"
+  },
+  "initial": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": "black",
+        "height": 1,
+        "balance": 0
+      },
+      {
+        "key": 20,
+        "left": 10,
+        "right": 30,
+        "color": "black",
+        "height": 2,
+        "balance": 0
+      },
+      {
+        "key": 30,
+        "left": null,
+        "right": null,
+        "color": "black",
+        "height": 1,
+        "balance": 0
+      }
+    ],
+    "inorder": [
+      10,
+      20,
+      30
+    ],
+    "height": 2,
+    "size": 3
+  },
+  "steps": [
+    {
+      "operation": {
+        "kind": "delete",
+        "key": 10
+      },
+      "status": "deleted",
+      "rotations": [
+        {
+          "kind": "left",
+          "pivot": 20,
+          "new_root": 30
+        }
+      ],
+      "tree": {
+        "root": 30,
+        "nodes": [
+          {
+            "key": 20,
+            "left": null,
+            "right": null,
+            "color": "red",
+            "height": 1,
+            "balance": 0
+          },
+          {
+            "key": 30,
+            "left": 20,
+            "right": null,
+            "color": "black",
+            "height": 2,
+            "balance": 1
+          }
+        ],
+        "inorder": [
+          20,
+          30
+        ],
+        "height": 2,
+        "size": 2
+      },
+      "recolors": [
+        {
+          "key": 20,
+          "before": "black",
+          "after": "red"
+        },
+        {
+          "key": 20,
+          "before": "red",
+          "after": "black"
+        },
+        {
+          "key": 10,
+          "before": "black",
+          "after": "red"
+        },
+        {
+          "key": 30,
+          "before": "black",
+          "after": "red"
+        },
+        {
+          "key": 30,
+          "before": "red",
+          "after": "black"
+        },
+        {
+          "key": 20,
+          "before": "black",
+          "after": "red"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "root": 30,
+    "nodes": [
+      {
+        "key": 20,
+        "left": null,
+        "right": null,
+        "color": "red",
+        "height": 1,
+        "balance": 0
+      },
+      {
+        "key": 30,
+        "left": 20,
+        "right": null,
+        "color": "black",
+        "height": 2,
+        "balance": 1
+      }
+    ],
+    "inorder": [
+      20,
+      30
+    ],
+    "height": 2,
+    "size": 2
+  },
+  "total_rotations": 1
+}

@@ -1,0 +1,205 @@
+{
+  "request": {
+    "initial": null,
+    "operations": [
+      {
+        "kind": "insert",
+        "key": 30
+      },
+      {
+        "kind": "insert",
+        "key": 20
+      },
+      {
+        "kind": "insert",
+        "key": 10
+      },
+      {
+        "kind": "delete",
+        "key": 20
+      }
+    ],
+    "tree_type": "bst"
+  },
+  "initial": {
+    "root": null,
+    "nodes": [],
+    "inorder": [],
+    "height": 0,
+    "size": 0
+  },
+  "steps": [
+    {
+      "operation": {
+        "kind": "insert",
+        "key": 30
+      },
+      "status": "inserted",
+      "rotations": [],
+      "tree": {
+        "root": 30,
+        "nodes": [
+          {
+            "key": 30,
+            "left": null,
+            "right": null,
+            "color": null,
+            "height": 1,
+            "balance": 0
+          }
+        ],
+        "inorder": [
+          30
+        ],
+        "height": 1,
+        "size": 1
+      },
+      "recolors": []
+    },
+    {
+      "operation": {
+        "kind": "insert",
+        "key": 20
+      },
+      "status": "inserted",
+      "rotations": [],
+      "tree": {
+        "root": 30,
+        "nodes": [
+          {
+            "key": 20,
+            "left": null,
+            "right": null,
+            "color": null,
+            "height": 1,
+            "balance": 0
+          },
+          {
+            "key": 30,
+            "left": 20,
+            "right": null,
+            "color": null,
+            "height": 2,
+            "balance": 1
+          }
+        ],
+        "inorder": [
+          20,
+          30
+        ],
+        "height": 2,
+        "size": 2
+      },
+      "recolors": []
+    },
+    {
+      "operation": {
+        "kind": "insert",
+        "key": 10
+      },
+      "status": "inserted",
+      "rotations": [],
+      "tree": {
+        "root": 30,
+        "nodes": [
+          {
+            "key": 10,
+            "left": null,
+            "right": null,
+            "color": null,
+            "height": 1,
+            "balance": 0
+          },
+          {
+            "key": 20,
+            "left": 10,
+            "right": null,
+            "color": null,
+            "height": 2,
+            "balance": 1
+          },
+          {
+            "key": 30,
+            "left": 20,
+            "right": null,
+            "color": null,
+            "height": 3,
+            "balance": 2
+          }
+        ],
+        "inorder": [
+          10,
+          20,
+          30
+        ],
+        "height": 3,
+        "size": 3
+      },
+      "recolors": []
+    },
+    {
+      "operation": {
+        "kind": "delete",
+        "key": 20
+      },
+      "status": "deleted",
+      "rotations": [],
+      "tree": {
+        "root": 30,
+        "nodes": [
+          {
+            "key": 10,
+            "left": null,
+            "right": null,
+            "color": null,
+            "height": 1,
+            "balance": 0
+          },
+          {
+            "key": 30,
+            "left": 10,
+            "right": null,
+            "color": null,
+            "height": 2,
+            "balance": 1
+          }
+        ],
+        "inorder": [
+          10,
+          30
+        ],
+        "height": 2,
+        "size": 2
+      },
+      "recolors": []
+    }
+  ],
+  "final": {
+    "root": 30,
+    "nodes": [
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": null,
+        "height": 1,
+        "balance": 0
+      },
+      {
+        "key": 30,
+        "left": 10,
+        "right": null,
+        "color": null,
+        "height": 2,
+        "balance": 1
+      }
+    ],
+    "inorder": [
+      10,
+      30
+    ],
+    "height": 2,
+    "size": 2
+  },
+  "total_rotations": 0
+}

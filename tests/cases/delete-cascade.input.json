@@ -1,0 +1,86 @@
+{
+  "initial": {
+    "root": 8,
+    "nodes": [
+      {
+        "key": 12,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 11,
+        "left": 10,
+        "right": 12,
+        "color": null
+      },
+      {
+        "key": 10,
+        "left": 9,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 9,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 8,
+        "left": 5,
+        "right": 11,
+        "color": null
+      },
+      {
+        "key": 7,
+        "left": 6,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 6,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 5,
+        "left": 3,
+        "right": 7,
+        "color": null
+      },
+      {
+        "key": 4,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 3,
+        "left": 2,
+        "right": 4,
+        "color": null
+      },
+      {
+        "key": 2,
+        "left": 1,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "color": null
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "delete",
+      "key": 12
+    }
+  ],
+  "tree_type": "avl"
+}

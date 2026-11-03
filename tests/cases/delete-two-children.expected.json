@@ -1,0 +1,202 @@
+{
+  "request": {
+    "initial": {
+      "root": 20,
+      "nodes": [
+        {
+          "key": 40,
+          "left": null,
+          "right": null,
+          "color": null
+        },
+        {
+          "key": 25,
+          "left": null,
+          "right": null,
+          "color": null
+        },
+        {
+          "key": 30,
+          "left": 25,
+          "right": 40,
+          "color": null
+        },
+        {
+          "key": 10,
+          "left": null,
+          "right": null,
+          "color": null
+        },
+        {
+          "key": 20,
+          "left": 10,
+          "right": 30,
+          "color": null
+        }
+      ]
+    },
+    "operations": [
+      {
+        "kind": "delete",
+        "key": 20
+      }
+    ],
+    "tree_type": "avl"
+  },
+  "initial": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 20,
+        "left": 10,
+        "right": 30,
+        "height": 3,
+        "balance": -1,
+        "color": null
+      },
+      {
+        "key": 25,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 30,
+        "left": 25,
+        "right": 40,
+        "height": 2,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 40,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      }
+    ],
+    "inorder": [
+      10,
+      20,
+      25,
+      30,
+      40
+    ],
+    "height": 3,
+    "size": 5
+  },
+  "steps": [
+    {
+      "operation": {
+        "kind": "delete",
+        "key": 20
+      },
+      "status": "deleted",
+      "rotations": [],
+      "tree": {
+        "root": 25,
+        "nodes": [
+          {
+            "key": 10,
+            "left": null,
+            "right": null,
+            "height": 1,
+            "balance": 0,
+            "color": null
+          },
+          {
+            "key": 25,
+            "left": 10,
+            "right": 30,
+            "height": 3,
+            "balance": -1,
+            "color": null
+          },
+          {
+            "key": 30,
+            "left": null,
+            "right": 40,
+            "height": 2,
+            "balance": -1,
+            "color": null
+          },
+          {
+            "key": 40,
+            "left": null,
+            "right": null,
+            "height": 1,
+            "balance": 0,
+            "color": null
+          }
+        ],
+        "inorder": [
+          10,
+          25,
+          30,
+          40
+        ],
+        "height": 3,
+        "size": 4
+      },
+      "recolors": []
+    }
+  ],
+  "final": {
+    "root": 25,
+    "nodes": [
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      },
+      {
+        "key": 25,
+        "left": 10,
+        "right": 30,
+        "height": 3,
+        "balance": -1,
+        "color": null
+      },
+      {
+        "key": 30,
+        "left": null,
+        "right": 40,
+        "height": 2,
+        "balance": -1,
+        "color": null
+      },
+      {
+        "key": 40,
+        "left": null,
+        "right": null,
+        "height": 1,
+        "balance": 0,
+        "color": null
+      }
+    ],
+    "inorder": [
+      10,
+      25,
+      30,
+      40
+    ],
+    "height": 3,
+    "size": 4
+  },
+  "total_rotations": 0
+}

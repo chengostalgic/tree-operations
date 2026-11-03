@@ -1,0 +1,56 @@
+{
+  "initial": {
+    "root": 5,
+    "nodes": [
+      {
+        "key": 9,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 6,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 7,
+        "left": 6,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 8,
+        "left": 7,
+        "right": 9,
+        "color": null
+      },
+      {
+        "key": 3,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 2,
+        "left": null,
+        "right": 3,
+        "color": null
+      },
+      {
+        "key": 5,
+        "left": 2,
+        "right": 8,
+        "color": null
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "delete",
+      "key": 3
+    }
+  ],
+  "tree_type": "avl"
+}

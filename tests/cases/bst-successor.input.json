@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 20,
+        "left": 10,
+        "right": 30,
+        "color": null
+      },
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 30,
+        "left": 25,
+        "right": 40,
+        "color": null
+      },
+      {
+        "key": 25,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 40,
+        "left": null,
+        "right": null,
+        "color": null
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "delete",
+      "key": 20
+    }
+  ],
+  "tree_type": "bst"
+}

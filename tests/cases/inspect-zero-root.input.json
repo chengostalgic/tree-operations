@@ -1,0 +1,27 @@
+{
+  "initial": {
+    "root": 0,
+    "nodes": [
+      {
+        "key": 1,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": -1,
+        "left": null,
+        "right": null,
+        "color": null
+      },
+      {
+        "key": 0,
+        "left": -1,
+        "right": 1,
+        "color": null
+      }
+    ]
+  },
+  "operations": [],
+  "tree_type": "avl"
+}

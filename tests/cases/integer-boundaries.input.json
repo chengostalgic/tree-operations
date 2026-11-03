@@ -1,0 +1,18 @@
+{
+  "initial": null,
+  "operations": [
+    {
+      "kind": "insert",
+      "key": -2147483648
+    },
+    {
+      "kind": "insert",
+      "key": 0
+    },
+    {
+      "kind": "insert",
+      "key": 2147483647
+    }
+  ],
+  "tree_type": "avl"
+}

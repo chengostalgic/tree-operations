@@ -1,0 +1,32 @@
+{
+  "initial": {
+    "root": 20,
+    "nodes": [
+      {
+        "key": 20,
+        "left": 10,
+        "right": 30,
+        "color": "black"
+      },
+      {
+        "key": 10,
+        "left": null,
+        "right": null,
+        "color": "black"
+      },
+      {
+        "key": 30,
+        "left": null,
+        "right": null,
+        "color": "black"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "kind": "delete",
+      "key": 10
+    }
+  ],
+  "tree_type": "red_black"
+}
